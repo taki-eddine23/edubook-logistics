@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduBook Logistics — كتابي الذكي | المنظومة الوطنية لإدارة سلاسل إمداد الكتاب المدرسي</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Tajawal', sans-serif; }
+    .hero-gradient { background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%); }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2 text-center sm:text-right">
+        <span class="bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">مشروع مبتكر</span>
+        <span>في إطار القرار الوزاري رقم 1275 والمرسوم التنفيذي رقم 20-254 (Startup.dz)</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400 text-[11px]">
+        <span><i class="fa-solid fa-location-dot text-amber-400 ml-1"></i>مركز عنابة (CRDDP)</span>
+        <span><i class="fa-solid fa-shield-halved text-emerald-400 ml-1"></i>منظومة مؤمنة 100%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white text-xl shadow-md">
+          <i class="fa-solid fa-book-bookmark text-amber-300"></i>
+        </div>
+        <div>
+          <span class="font-black text-lg text-slate-900 tracking-tight block">EduBook Logistics</span>
+          <span class="text-[10px] font-bold text-emerald-700 block -mt-1">كتابي الذكي — GovTech Supply Chain</span>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center gap-6 text-sm font-bold text-slate-600">
+        <a href="#features" class="hover:text-emerald-700 transition">المحاور الذكية</a>
+        <a href="#sectors" class="hover:text-emerald-700 transition">الفئات المستهدفة</a>
+        <a href="#download" class="hover:text-emerald-700 transition">تحميل التطبيق</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="#download" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-extrabold px-4 py-2.5 rounded-xl shadow-md transition flex items-center gap-2">
+          <i class="fa-solid fa-download"></i>
+          <span>تحميل النسخة التجريبية</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero-gradient text-white pt-16 pb-20 px-4 sm:px-6 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+      
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-bold text-amber-300">
+          <i class="fa-solid fa-sparkles"></i>
+          <span>المنظومة السحابية الذكية لإدارة وتوزيع الكتاب المدرسي</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
+          رقمنة سلاسل الإمداد اللوجستية، التنبؤ بالطلب، وأتمتة المحاسبة المدرسية
+        </h1>
+
+        <p class="text-slate-200 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          منظومة متكاملة تربط بين المراكز الولائية للتوزيع (<span class="text-amber-300 font-bold">CRDDP</span>)، المؤسسات التعليمية والمقتصدين، وشبكة المكتبات الخاصة المعتمدة، مع بوابة إلكترونية لخدمة أولياء التلاميذ.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+          <a href="#download" class="w-full sm:w-auto bg-amber-400 hover:bg-amber-500 text-slate-950 font-black px-6 py-3.5 rounded-xl shadow-xl transition flex items-center justify-center gap-2 text-sm">
+            <i class="fa-brands fa-android text-lg"></i>
+            <span>تحميل التطبيق (Android APK)</span>
+          </a>
+          <a href="#features" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-6 py-3.5 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+            <i class="fa-solid fa-circle-play"></i>
+            <span>استعراض مميزات المنظومة</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-white/10 text-center">
+          <div>
+            <h4 class="font-black text-xl sm:text-2xl text-amber-300">100%</h4>
+            <p class="text-[11px] text-slate-300">تتبع رقمي بالباركود</p>
+          </div>
+          <div>
+            <h4 class="font-black text-xl sm:text-2xl text-amber-300">0 دقيقة</h4>
+            <p class="text-[11px] text-slate-300">توليد جداول 15 و16</p>
+          </div>
+          <div>
+            <h4 class="font-black text-xl sm:text-2xl text-amber-300">58 ولاية</h4>
+            <p class="text-[11px] text-slate-300">جاهزية التوسع الوطني</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- App Mockup Card -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="w-72 sm:w-80 bg-slate-900 p-3 rounded-[2.5rem] shadow-2xl border-4 border-slate-700 relative">
+          <div class="bg-slate-800 rounded-[2rem] overflow-hidden p-4 space-y-4 text-white">
+            <div class="flex justify-between items-center text-xs pb-2 border-b border-slate-700">
+              <span class="font-extrabold text-emerald-400">EduBook Mobile App</span>
+              <span class="text-[10px] bg-emerald-900 text-emerald-300 px-2 py-0.5 rounded-full">نسخة تجريبية v1.0</span>
+            </div>
+            
+            <div class="bg-emerald-950 p-3 rounded-xl border border-emerald-800 space-y-1">
+              <span class="text-[10px] text-amber-300 font-bold block">سند الطلب النموذجي الآلي</span>
+              <p class="text-xs font-black">مؤسسة تعليمية نموذجية (عنابة)</p>
+              <div class="flex justify-between text-[11px] text-emerald-300 pt-1">
+                <span>تطابق الحصة: 100%</span>
+                <span class="text-amber-400 font-bold">صفر عجز وفائض</span>
+              </div>
+            </div>
+
+            <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-700 space-y-2">
+              <div class="flex items-center gap-2 text-xs font-bold text-slate-200">
+                <i class="fa-solid fa-barcode text-emerald-400"></i>
+                <span>المسح الفوري للطرود وحصص المجانية</span>
+              </div>
+              <div class="w-full h-12 bg-slate-950 rounded-lg flex items-center justify-center font-mono text-[10px] text-emerald-400 border border-slate-800">
+                ||| || ||| | |||| | ||| [ONPS-CRDDP-2027]
+              </div>
+            </div>
+
+            <div class="p-2.5 bg-indigo-950/80 rounded-xl border border-indigo-800/60 flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-file-pdf text-red-400 text-base"></i>
+                <div>
+                  <p class="font-bold text-[11px]">جدول 15 وجدول 16</p>
+                  <p class="text-[9px] text-slate-400">جاهز للطباعة والختم الفوري</p>
+                </div>
+              </div>
+              <span class="text-emerald-400 font-black text-xs">مكتمل</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 4 CORE PILLARS SECTION -->
+  <section id="features" class="py-16 px-4 sm:px-6 max-w-6xl mx-auto">
+    <div class="text-center space-y-3 mb-12">
+      <h2 class="text-xs font-black text-emerald-700 tracking-wider uppercase">الركائز التكنولوجية الأربع</h2>
+      <h3 class="text-2xl sm:text-3xl font-black text-slate-900">حلول رقمية متكاملة لخدمة قطاع التربية الوطنية</h3>
+      <p class="text-sm text-slate-500 max-w-xl mx-auto">
+        هندسة ذكية تم تطويرها من واقع الميدان للقضاء على البيروقراطية اللوجستية وتأخر توزيع الكتاب المدرسي.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Feature 1 -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition space-y-3">
+        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+        <h4 class="font-black text-base text-slate-900">محرك التنبؤ الذكي بالطلب</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          معالجة مؤشرات الخريطة المدرسية ونسب الانتقال والنجاح لإصدار سند طلب دقيق يمنع التكديس والعجز مسبقاً.
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition space-y-3">
+        <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center text-xl">
+          <i class="fa-solid fa-qrcode"></i>
+        </div>
+        <h4 class="font-black text-base text-slate-900">التتبع بالباركود والتناقل البيني</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          تتبع حركة الطرود من المستودع إلى المؤسسة، مع آلية رقمية لتحويل الفائض من مؤسسة إلى أخرى مجاورة فورياً.
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition space-y-3">
+        <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center text-xl">
+          <i class="fa-solid fa-file-invoice-dollar"></i>
+        </div>
+        <h4 class="font-black text-base text-slate-900">أتمتة الجداول والمحاسبة</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          توليد جدول 15 (المعوزين) وجدول 16 (أبناء القطاع) وحسابات التسيير بضغطة زر واحدة مطابقة محاسبياً.
+        </p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition space-y-3">
+        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center text-xl">
+          <i class="fa-solid fa-motorcycle"></i>
+        </div>
+        <h4 class="font-black text-base text-slate-900">الشراء الرقمي والتوصيل السريع</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          تطبيق للأولياء لحجز الكتب بالبطاقة الذهبية وتوصيلها لباب المنزل لإنهاء طوابير نقاط البيع والمعارض نهائياً.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TARGET AUDIENCES / ECOSYSTEM -->
+  <section id="sectors" class="py-14 bg-slate-100 px-4 sm:px-6 border-y border-slate-200">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center space-y-2 mb-10">
+        <h3 class="text-2xl font-black text-slate-900">منظومة موحدة تخدم جميع الفاعلين في القطاع</h3>
+        <p class="text-xs text-slate-500">تنسيق سلس يربط الهيئات المركزية بالميدان التربوي والمواطن</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center sm:text-right">
+        
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-lg mx-auto sm:mx-0">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <h4 class="font-bold text-base text-slate-900">الديوان الوطني ومراكز CRDDP</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            لوحة قيادة مركزية لرصد المخزون الوطني لحظياً، تقليص نفقات الطباعة الطارئة، وإقفال الحسابات السنوية بدقة.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-800 flex items-center justify-center text-lg mx-auto sm:mx-0">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <h4 class="font-bold text-base text-slate-900">المؤسسات التربوية والمقتصدون</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            تطبيق ميداني خفيف يعمل بدون إنترنت لاستلام الطرود، ضبط سجلات المخزن، واستخراج ملفات PDF الرسمية فورياً.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-lg mx-auto sm:mx-0">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h4 class="font-bold text-base text-slate-900">أولياء التلاميذ والمكتبات</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            حجز الكتب وتتبع طلبيات المكتبات المعتمدة، والدفع الآمن بالبطاقة الذهبية مع خيار التوصيل المنزلي السريع.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD / CTA SECTION -->
+  <section id="download" class="py-16 px-4 sm:px-6 max-w-4xl mx-auto text-center space-y-6">
+    <div class="inline-flex p-3 bg-emerald-50 text-emerald-700 rounded-2xl mb-2 text-2xl">
+      <i class="fa-solid fa-mobile-screen-button"></i>
+    </div>
+    
+    <h3 class="text-2xl sm:text-3xl font-black text-slate-900">
+      حمّل النسخة التجريبية لتطبيق كتابي الذكي (Prototype v1.0)
+    </h3>
+    
+    <p class="text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
+      نسخة أولية موجهة لمديري المدارس والمقتصدين والشركاء التقنيين لتجريب ماسح الباركود، سندات الطلب، واستخراج جداول المجانية.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+      <button onclick="downloadAppMock()" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-black px-8 py-4 rounded-2xl shadow-lg transition flex items-center justify-center gap-3 text-sm">
+        <i class="fa-brands fa-android text-2xl"></i>
+        <div class="text-right">
+          <span class="block text-[10px] text-emerald-200">تحميل مباشر مجاني</span>
+          <span class="block text-sm font-bold">EduBook_v1.0_Beta.apk</span>
+        </div>
+      </button>
+
+      <button onclick="contactPartnership()" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white font-bold px-8 py-4 rounded-2xl shadow-lg transition flex items-center justify-center gap-3 text-sm">
+        <i class="fa-solid fa-handshake text-xl text-amber-400"></i>
+        <div class="text-right">
+          <span class="block text-[10px] text-slate-400">للمطورين والشركاء</span>
+          <span class="block text-sm font-bold">طلب الانضمام كشريك تقني</span>
+        </div>
+      </button>
+    </div>
+
+    <div id="cta-toast" class="hidden p-3 bg-emerald-100 border border-emerald-300 text-emerald-900 rounded-xl text-xs max-w-md mx-auto font-bold transition"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 py-10 px-4 sm:px-6 border-t border-slate-800 text-xs">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-right">
+      <div>
+        <p class="font-bold text-slate-200">مشروع EduBook Logistics — كتابي الذكي</p>
+        <p class="text-[11px] text-slate-500 mt-0.5">مسجل ضمن حاضنة أعمال جامعة التكوين المتواصل وعلامة Startup.dz — عنابة</p>
+      </div>
+      <div class="text-[11px] text-slate-500">
+        جميع الحقوق محفوظة © 2026 — هندسة وتطوير فريق EduBook
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function downloadAppMock() {
+      const toast = document.getElementById('cta-toast');
+      toast.innerText = '✅ جاري بدء تحميل النسخة التجريبية EduBook_v1.0_Beta.apk (الحجم: 14.2 MB)...';
+      toast.classList.remove('hidden');
+      setTimeout(() => { toast.classList.add('hidden'); }, 5000);
+    }
+
+    function contactPartnership() {
+      const toast = document.getElementById('cta-toast');
+      toast.innerText = '🤝 مرحباً بك! يرجى التواصل المباشر مع قائد المشروع عبر الخاص أو البريد لإرسال حساب GitHub وتوقيع ميثاق السرية (NDA).';
+      toast.classList.remove('hidden');
+      setTimeout(() => { toast.classList.add('hidden'); }, 6000);
+    }
+  </script>
+</body>
+</html>
