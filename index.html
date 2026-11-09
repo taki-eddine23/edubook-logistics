@@ -9,12 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      /* الهوية البصرية الرسمية */
-      --edu-green: #0d7a53;       /* الأخضر التربوي */
+      --edu-green: #0d7a53;
       --edu-green-light: #ecfdf5;
-      --navy-blue: #0f2b48;       /* الأزرق السحابي واللوجستي */
+      --navy-blue: #0f2b48;
       --navy-blue-light: #f0f7ff;
-      --gold-accent: #d97706;     /* الذهبي العنبري للكتاب المدرسي */
+      --gold-accent: #d97706;
       --gold-light: #fffbeb;
       --text-dark: #1e293b;
       --text-muted: #64748b;
@@ -63,8 +62,8 @@
     }
 
     .logo-container {
-      width: 46px;
-      height: 46px;
+      width: 44px;
+      height: 44px;
       background: linear-gradient(135deg, var(--edu-green), var(--navy-blue));
       border-radius: 12px;
       display: flex;
@@ -73,12 +72,11 @@
       color: white;
       font-weight: 900;
       font-size: 1.3rem;
-      box-shadow: 0 4px 10px rgba(13, 122, 83, 0.25);
       border: 2px solid var(--gold-accent);
     }
 
     .brand-title {
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       font-weight: 900;
       color: var(--navy-blue);
       display: block;
@@ -99,20 +97,17 @@
       border-radius: 9999px;
       font-size: 0.8rem;
       font-weight: 800;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
     }
 
     .hero {
-      padding: 4.5rem 1.5rem 3.5rem;
+      padding: 4rem 1.5rem 3rem;
       text-align: center;
       background: radial-gradient(circle at top, var(--navy-blue-light) 0%, var(--bg-light) 100%);
       border-bottom: 1px solid var(--border);
     }
 
     .hero-container {
-      max-width: 900px;
+      max-width: 880px;
       margin: 0 auto;
     }
 
@@ -121,55 +116,52 @@
       background: var(--edu-green-light);
       color: var(--edu-green);
       border: 1px solid #a7f3d0;
-      padding: 0.4rem 1.2rem;
+      padding: 0.35rem 1.1rem;
       border-radius: 30px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 800;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h1 {
-      font-size: 2.4rem;
-      font-weight: 900;
-      color: var(--navy-blue);
-      line-height: 1.3;
       margin-bottom: 1.2rem;
     }
 
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--navy-blue);
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
     .hero p {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--text-muted);
-      margin-bottom: 2.2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-bottom: 2rem;
     }
 
     .hero-actions {
       display: flex;
       justify-content: center;
-      gap: 1.2rem;
+      gap: 1rem;
       flex-wrap: wrap;
     }
 
     .btn {
-      padding: 0.85rem 2rem;
+      padding: 0.8rem 1.8rem;
       border-radius: 12px;
       font-weight: 800;
-      font-size: 1rem;
+      font-size: 0.95rem;
       cursor: pointer;
       text-decoration: none;
       transition: all 0.2s ease;
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.5rem;
       border: none;
     }
 
     .btn-primary {
       background: var(--edu-green);
       color: white;
-      box-shadow: 0 4px 14px rgba(13, 122, 83, 0.3);
+      box-shadow: 0 4px 14px rgba(13, 122, 83, 0.25);
     }
 
     .btn-primary:hover {
@@ -180,7 +172,7 @@
     .btn-navy {
       background: var(--navy-blue);
       color: white;
-      box-shadow: 0 4px 14px rgba(15, 43, 72, 0.25);
+      box-shadow: 0 4px 14px rgba(15, 43, 72, 0.2);
     }
 
     .btn-navy:hover {
@@ -190,49 +182,49 @@
 
     .features {
       max-width: 1150px;
-      margin: 4.5rem auto;
+      margin: 4rem auto;
       padding: 0 1.5rem;
     }
 
     .section-header {
       text-align: center;
-      margin-bottom: 3.5rem;
+      margin-bottom: 3rem;
     }
 
     .section-header h2 {
-      font-size: 2rem;
+      font-size: 1.9rem;
       color: var(--navy-blue);
       font-weight: 900;
     }
 
     .section-header p {
       color: var(--text-muted);
-      font-size: 1rem;
-      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      margin-top: 0.4rem;
     }
 
     .grid-4 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.8rem;
+      gap: 1.5rem;
     }
 
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 1.8rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      border-radius: 16px;
+      padding: 1.6rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       border-top: 4px solid var(--navy-blue);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     }
 
     .card.card-parents {
@@ -245,16 +237,16 @@
     }
 
     .card-icon {
-      width: 52px;
-      height: 52px;
+      width: 48px;
+      height: 48px;
       background: var(--navy-blue-light);
       color: var(--navy-blue);
-      border-radius: 14px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.7rem;
-      margin-bottom: 1.2rem;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     .card-parents .card-icon {
@@ -268,27 +260,27 @@
     }
 
     .card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.6rem;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
       color: var(--navy-blue);
       font-weight: 800;
     }
 
     .card p {
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
       line-height: 1.6;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.4rem;
       flex-grow: 1;
     }
 
-    .btn-video {
-      background: #f1f5f9;
+    .btn-detail {
+      background: #f8fafc;
       color: var(--navy-blue);
-      padding: 0.55rem 1rem;
+      padding: 0.6rem 1rem;
       border-radius: 10px;
-      font-size: 0.85rem;
-      font-weight: 700;
+      font-size: 0.88rem;
+      font-weight: 800;
       border: 1px solid #cbd5e1;
       display: inline-flex;
       align-items: center;
@@ -299,7 +291,7 @@
       transition: all 0.2s ease;
     }
 
-    .btn-video:hover {
+    .btn-detail:hover {
       background: var(--navy-blue);
       color: white;
       border-color: var(--navy-blue);
@@ -313,8 +305,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(15, 23, 42, 0.7);
-      backdrop-filter: blur(5px);
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(4px);
       z-index: 100;
       align-items: center;
       justify-content: center;
@@ -327,30 +319,30 @@
 
     .modal-content {
       background: white;
-      border-radius: 22px;
-      max-width: 600px;
+      border-radius: 20px;
+      max-width: 560px;
       width: 100%;
-      padding: 2.2rem;
+      padding: 2rem;
       position: relative;
-      box-shadow: 0 25px 30px -10px rgba(0, 0, 0, 0.2);
-      animation: modalFade 0.25s ease-out;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+      animation: modalFade 0.2s ease-out;
     }
 
     @keyframes modalFade {
-      from { opacity: 0; transform: scale(0.96); }
+      from { opacity: 0; transform: scale(0.97); }
       to { opacity: 1; transform: scale(1); }
     }
 
     .modal-close {
       position: absolute;
-      top: 1.25rem;
-      left: 1.25rem;
+      top: 1.2rem;
+      left: 1.2rem;
       background: #f1f5f9;
       border: none;
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       cursor: pointer;
       color: var(--text-dark);
       display: flex;
@@ -358,47 +350,50 @@
       justify-content: center;
     }
 
-    .video-mockup-screen {
-      background: #0f172a;
-      border-radius: 16px;
-      padding: 1.5rem;
-      color: white;
-      margin: 1.5rem 0;
-      border: 2px solid #334155;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+    .step-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      align-items: flex-start;
+      background: #f8fafc;
+      padding: 0.9rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
     }
 
-    .video-timeline {
+    .step-number {
+      background: var(--navy-blue);
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      background: #1e293b;
-      padding: 0.6rem 1rem;
-      border-radius: 8px;
-      margin-top: 1rem;
-      font-size: 0.8rem;
-      color: #94a3b8;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.85rem;
+      flex-shrink: 0;
     }
 
-    .step-badge {
-      display: inline-block;
-      background: var(--edu-green);
-      color: white;
-      padding: 0.2rem 0.6rem;
-      border-radius: 6px;
-      font-size: 0.75rem;
-      font-weight: 800;
+    .step-text h4 {
+      font-size: 0.95rem;
+      color: var(--navy-blue);
+      margin-bottom: 0.2rem;
+    }
+
+    .step-text p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.4;
     }
 
     footer {
       background: white;
       border-top: 1px solid var(--border);
-      padding: 2.5rem 1.5rem;
+      padding: 2rem 1.5rem;
       text-align: center;
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
   </style>
 </head>
@@ -423,14 +418,14 @@
         <span class="hero-tag">حاضنة أعمال جامعة التكوين المتواصل - مركز عنابة</span>
         <h1>الرقمنة الشاملة لسلاسل إمداد وتوزيع الكتاب المدرسي</h1>
         <p>
-          نظام سحابي ذكي وتطبيق ميداني متكامل لتتبع حركة الكتب المدرسية، أتمتة الجرد بالباركود، القضاء على طوابير الأولياء بالتوصيل المنزلي، وحساب الاستشراف الدقيق للطلب لمنع التكديس والعجز.
+          نظام سحابي وتطبيق ميداني لتتبع الشحنات، أتمتة الجرد بالباركود، توفير خدمة الحجز والتوصيل للأولياء، والتنبؤ الدقيق بالاحتياجات لمنع التكديس والعجز السنوي.
         </p>
         <div class="hero-actions">
           <button class="btn btn-primary" onclick="openAppModal()">
-            📱 استعراض النموذج الأولي للتطبيق (MVP)
+            📱 استعراض النموذج الميداني (MVP)
           </button>
           <a href="#features" class="btn btn-navy">
-            ⚙️ استعراض الفيديوهات والمميزات
+            ⚙️ تفاصيل المنظومة التشغيلية
           </a>
         </div>
       </div>
@@ -438,118 +433,119 @@
 
     <section id="features" class="features">
       <div class="section-header">
-        <h2>أركان المنظومة التكنولوجية الأربعة</h2>
-        <p>حلول متكاملة تخدم المراكز الولائية (CRDDP)، المؤسسات التربوية، وأولياء الأمور</p>
+        <h2>أركان المنظومة التكنولوجية</h2>
+        <p>آليات تشغيلية محددة تخدم مراكز التوزيع (CRDDP)، المؤسسات التربوية، وأولياء الأمور</p>
       </div>
 
       <div class="grid-4">
-        <!-- الميزة 1: التتبع اللوجستي -->
+        <!-- 1. التتبع -->
         <div class="card card-green">
           <div>
             <div class="card-icon">🚚</div>
             <h3>التتبع اللحظي للشحنات</h3>
-            <p>متابعة حركة طرود وحزم الكتب من المخزن المركزي مروراً بالمراكز الولائية وحتى المؤسسات التعليمية ببروتوكول رقمي مشفر يمنع التسريب والضياع.</p>
+            <p>متابعة حركة طرود الكتب من مخازن المركز الولائي للتوزيع نحو المؤسسات التعليمية ببروتوكول رقمي يضمن وصول كامل الحصة المقررة دون ضياع.</p>
           </div>
-          <button class="btn-video" onclick="openVideoModal('تتبع حركة الشحنات اللحظية', '🚚 خطوة 1: مسح سند الشحن من CRDDP<br>📦 خطوة 2: تتبع مسار الشاحنة عبر الخريطة<br>✅ خطوة 3: تأكيد الوصول وتوقيع الاستلام الرقمي', '30 ثانية')">
-            🎬 فيديو الشرح (30 ثا)
+          <button class="btn-detail" onclick="openDetailModal('مسار دورة الشحن والتوزيع', [
+            {title: 'توليد إذن الشحن الرقمي', desc: 'إصدار رمز استجابة سريع (QR) لكل شحنة من مركز التوزيع CRDDP يحدد الكميات والعناوين بدقة.'},
+            {title: 'متابعة خط السير الميداني', desc: 'تحديد نقطة انطلاق ووصول وسيلة النقل مع توقيت التسليم التقديري للمؤسسة.'},
+            {title: 'المطابقة والتوقيع الرقمي', desc: 'مسؤول الاستقبال بالمؤسسة يفحص الطرود ويوقع إلكترونياً على وصل الاستلام المطابق.'}
+          ])">
+            📋 مسار دورة الشحن
           </button>
         </div>
 
-        <!-- الميزة 2: الجرد السريع بالباركود -->
+        <!-- 2. الجرد -->
         <div class="card">
           <div>
             <div class="card-icon">🔍</div>
             <h3>الجرد الميداني بالباركود</h3>
-            <p>تطبيق هاتف للمقتصدين ومسيري المخازن لمسح وتدقيق العناوين بالباركود والـ QR Code فورياً، وتوليد محاضر الاستلام والمطابقة المحاسبية بضغطة زر.</p>
+            <p>تطبيق هاتف لمسيري المصالح الاقتصادية والمخازن لمسح الكتب بالباركود وحساب الرصيد الفعلي تلقائياً مع كشف أي تباين في الحسابات.</p>
           </div>
-          <button class="btn-video" onclick="openVideoModal('الجرد الرقمي السريع بالباركود', '📷 خطوة 1: فتح كاميرا التطبيق<br>⚡ خطوة 2: مسح 50 كتاباً في أقل من دقيقة<br>📄 خطوة 3: استخراج كشف الجرد اللحظي', '35 ثانية')">
-            🎬 فيديو الشرح (35 ثا)
+          <button class="btn-detail" onclick="openDetailModal('خطوات المسح الميداني والجرد', [
+            {title: 'تشغيل كاميرا الماسح', desc: 'قراءة الرمز الدولي للكتاب (ISBN أو باركود الحزمة) بسرعة فائقة ودون الحاجة لأجهزة مخصصة مكلفة.'},
+            {title: 'التسجيل اللحظي في المخزن', desc: 'خصم الكتب الموزعة أو إضافة الكتب المستلمة مباشرة إلى قاعدة البيانات السحابية.'},
+            {title: 'استخراج كشف المطابقة', desc: 'المقارنة الفورية بين المخزون الدفتري النظري والموجودات الفعلية بضغطة زر واحدة.'}
+          ])">
+            📱 خطوات المسح الميداني
           </button>
         </div>
 
-        <!-- الميزة 3: بوابة الأولياء والتوصيل المنزلي -->
+        <!-- 3. الأولياء -->
         <div class="card card-parents">
           <div>
             <div class="card-icon">👨‍👩‍👦</div>
             <h3>بوابة الأولياء والتوصيل</h3>
-            <p>تطبيق مخصص للأولياء لحجز الحصة المدرسية رقمياً، خيار التوصيل المنزلي السريع للقضاء التام على الطوابير، ومتابعة فورية ومجانية لكتب التلاميذ المعوزين ومنحة 5000 دج.</p>
+            <p>منصة تتيح للأولياء حجز الحزمة المدرسية كاملة، القضاء على الطوابير عبر خيار التوصيل للمنزل، وضمان وصول كتب المجانية لمستحقيها بكرامة.</p>
           </div>
-          <button class="btn-video" onclick="openVideoModal('بوابة الأولياء والتوصيل المنزلي', '📱 خطوة 1: إدخال رقم التلميذ والطور الدراسي<br>💳 خطوة 2: الدفع الإلكتروني (CIB / الذهبية) أو تأكيد المجانية<br>🛵 خطوة 3: استلام الكتب في المنزل أو في المدرسة دون انتظار', '40 ثانية')">
-            🎬 فيديو الشرح (40 ثا)
+          <button class="btn-detail" onclick="openDetailModal('دليل الولي وآلية الاستلام', [
+            {title: 'تحديد المستوى الدراسي', desc: 'إدخال بيانات التلميذ لتظهر قائمة الكتب الرسمية المعتمدة تلقائياً حسب الطور.'},
+            {title: 'تأكيد المجانية أو الدفع', desc: 'التحقق الآلي من منحة 5000 دج أو إتمام الدفع الإلكتروني الآمن ببطاقة CIB والذهبية.'},
+            {title: 'طريقة الاستلام المرنة', desc: 'اختيار استلام الكتب مباشرة من المؤسسة بدون طوابير، أو طلب التوصيل المباشر إلى باب المنزل.'}
+          ])">
+            🛵 دليل الولي والتوصيل
           </button>
         </div>
 
-        <!-- الميزة 4: التنبؤ بالطلب والمجانية -->
+        <!-- 4. التنبؤ والجداول -->
         <div class="card">
           <div>
             <div class="card-icon">📊</div>
             <h3>التنبؤ الذكي وأتمتة الجداول</h3>
-            <p>خوارزمية لمعالجة الخريطة المدرسية ونسب النجاح والرسوب لتوليد سند طلب مثالي يستبق العجز، مع أتمتة جداول المجانية الرسمية (جدول 15 و16) فورياً.</p>
+            <p>خوارزمية لمعالجة مؤشرات الخريطة التربوية لحساب الحاجة الفعلية بدقة، مع توليد جداول المجانية الرسمية (15 و16) للمؤسسة جاهزة للاعتماد.</p>
           </div>
-          <button class="btn-video" onclick="openVideoModal('محرك التنبؤ وأتمتة جداول المجانية', '📈 خطوة 1: ربط بيانات الخريطة التربوية<br>🧠 خطوة 2: معالجة خوارزمية التنبؤ لاحتياج كل قسم<br>📑 خطوة 3: طباعة جدول 15 و16 وجداول التصفية المالية', '30 ثانية')">
-            🎬 فيديو الشرح (30 ثا)
+          <button class="btn-detail" onclick="openDetailModal('آلية الحساب واستخراج الجداول', [
+            {title: 'ربط بيانات الخريطة التربوية', desc: 'قراءة تعداد التلاميذ المتوقع لكل فوج تربوي ونسب النجاح والانتقال السنوية.'},
+            {title: 'توليد سند الطلب النموذجي', desc: 'حساب دقيق لعدد النسخ المطلوبة لكل عنوان لتفادي تكدس الكتب الفائضة أو تسجيل عجز.'},
+            {title: 'أتمتة جدولي 15 و16', desc: 'تجهيز جداول المستفيدين من المجانية والتصفية المالية وطباعتها مباشرة وفق النماذج الرسمية.'}
+          ])">
+            📑 آلية الحساب والجداول
           </button>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Modal لعرض الفيديو التوضيحي -->
-  <div id="videoModal" class="modal">
+  <!-- Modal تفاصيل الميزة -->
+  <div id="detailModal" class="modal">
     <div class="modal-content">
-      <button class="modal-close" onclick="closeVideoModal()">&times;</button>
-      <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-        <span class="step-badge" id="videoDuration">30 ثانية</span>
-        <h3 id="videoTitle" style="color: var(--navy-blue); font-size: 1.3rem;">عرض الميزة</h3>
-      </div>
-      <p style="color: var(--text-muted); font-size: 0.9rem;">محاكاة تفاعلية لسير العمليات الميدانية على النظام والتطبيق:</p>
-
-      <div class="video-mockup-screen">
-        <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">🎬 📱</div>
-        <div id="videoSteps" style="font-size: 0.95rem; line-height: 1.8; text-align: right; background: rgba(255,255,255,0.07); padding: 1rem; border-radius: 10px;">
-          جاري تحميل خطوات المحاكاة...
-        </div>
-        <div class="video-timeline">
-          <span>▶️ محاكاة قيد العرض التفاعلي</span>
-          <span style="color: var(--gold-accent);">EduBook Engine v1.0</span>
-        </div>
-      </div>
-
-      <div style="text-align: center;">
-        <button class="btn btn-navy" style="width: 100%; justify-content: center;" onclick="closeVideoModal()">
-          إغلاق العرض التوضيحي
-        </button>
-      </div>
+      <button class="modal-close" onclick="closeDetailModal()">&times;</button>
+      <h3 id="modalTitle" style="color: var(--navy-blue); font-size: 1.25rem; margin-bottom: 1.2rem;"></h3>
+      <div id="modalSteps"></div>
+      <button class="btn btn-navy" style="width: 100%; justify-content: center; margin-top: 1rem;" onclick="closeDetailModal()">
+        إغلاق
+      </button>
     </div>
   </div>
 
-  <!-- Modal استعراض التطبيق التجريبي -->
+  <!-- Modal استعراض التطبيق الميداني -->
   <div id="appModal" class="modal">
     <div class="modal-content">
       <button class="modal-close" onclick="closeAppModal()">&times;</button>
-      <span class="step-badge" style="background: var(--gold-accent); margin-bottom: 0.8rem;">النموذج الأولي المعتمد (MVP v1.0)</span>
-      <h3 style="color: var(--navy-blue); margin-bottom: 0.5rem;">الواجهة الميدانية لتطبيق EduBook</h3>
+      <span style="display:inline-block; background: var(--gold-light); color: var(--gold-accent); border: 1px solid #fde68a; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 800; margin-bottom: 0.8rem;">
+        النموذج الأولي الميداني (MVP)
+      </span>
+      <h3 style="color: var(--navy-blue); margin-bottom: 0.5rem;">تطبيق EduBook الميداني</h3>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem;">
-        النسخة التجريبية الميدانية المخصصة لمسيري مصالح الوسائل والمخازن وأولياء الأمور:
+        واجهة تشغيلية مخصصة لمسيري مصالح المالية والوسائل ومخازن المؤسسات التعليمية:
       </p>
 
-      <div style="background: var(--bg-light); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; margin-bottom: 1.5rem;">
-        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--border);">
-          <span>🔍 ماسح الباركود السريع (QR Scanner)</span>
+      <div style="background: var(--bg-light); border: 1px solid var(--border); border-radius: 12px; padding: 0.8rem; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem;">
+          <span>🔍 ماسح الباركود السريع (Barcode/QR)</span>
           <strong style="color: var(--edu-green);">مفعل ومختبر</strong>
         </div>
-        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--border);">
+        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem;">
           <span>👨‍👩‍👦 بوابة حجز الأولياء والتوصيل</span>
           <strong style="color: var(--gold-accent);">جاهز للتجريب</strong>
         </div>
-        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0;">
+        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; font-size: 0.9rem;">
           <span>📑 التوليد الآلي لجدول 15 وجدول 16</span>
-          <strong style="color: var(--navy-blue);">مؤتمت 100%</strong>
+          <strong style="color: var(--navy-blue);">مؤتمت</strong>
         </div>
       </div>
 
-      <button class="btn btn-primary" style="width: 100%; justify-content: center;" onclick="alert('تم تسجيل طلبكم لحضور جلسة العرض التقديمي (Pitching) بالحاضنة!'); closeAppModal();">
-        طلب حجز موعد عرض توضيحي (Demo Session)
+      <button class="btn btn-primary" style="width: 100%; justify-content: center;" onclick="alert('تم تسجيل طلبكم لمعاينة النموذج في جلسة التحكيم بالحاضنة!'); closeAppModal();">
+        طلب معاينة في جلسة العرض (Pitching)
       </button>
     </div>
   </div>
@@ -559,19 +555,31 @@
   </footer>
 
   <script>
-    function openVideoModal(title, stepsHtml, duration) {
-      document.getElementById('videoTitle').innerText = title;
-      document.getElementById('videoSteps').innerHTML = stepsHtml;
-      document.getElementById('videoDuration').innerText = duration;
-      document.getElementById('videoModal').classList.add('active');
+    function openDetailModal(title, steps) {
+      document.getElementById('modalTitle').innerText = title;
+      var container = document.getElementById('modalSteps');
+      container.innerHTML = '';
+      steps.forEach(function(step, index) {
+        var div = document.createElement('div');
+        div.className = 'step-item';
+        div.innerHTML = '<div class="step-number">' + (index + 1) + '</div>' +
+                        '<div class="step-text">' +
+                          '<h4>' + step.title + '</h4>' +
+                          '<p>' + step.desc + '</p>' +
+                        '</div>';
+        container.appendChild(div);
+      });
+      document.getElementById('detailModal').classList.add('active');
     }
-    function closeVideoModal() {
-      document.getElementById('videoModal').classList.remove('active');
+
+    function closeDetailModal() {
+      document.getElementById('detailModal').classList.remove('active');
     }
 
     function openAppModal() {
       document.getElementById('appModal').classList.add('active');
     }
+
     function closeAppModal() {
       document.getElementById('appModal').classList.remove('active');
     }
