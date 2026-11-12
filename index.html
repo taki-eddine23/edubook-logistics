@@ -26,7 +26,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Cairo', sans-serif;
+      font-family: 'ManaraDocs Amatti Font', 'ManaraDocs Amatti', 'Cairo', sans-serif;
     }
 
     body {
@@ -52,6 +52,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
     }
 
     .brand {
@@ -62,17 +64,23 @@
     }
 
     .logo-container {
-      width: 44px;
-      height: 44px;
-      background: linear-gradient(135deg, var(--edu-green), var(--navy-blue));
+      width: 48px;
+      height: 48px;
+      background: #ffffff;
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
-      font-weight: 900;
-      font-size: 1.3rem;
-      border: 2px solid var(--gold-accent);
+      border: 2px solid var(--edu-green);
+      padding: 3px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(13, 122, 83, 0.15);
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     .brand-title {
@@ -90,9 +98,9 @@
     }
 
     .badge-decree {
-      background: var(--gold-light);
-      color: var(--gold-accent);
-      border: 1px solid #fde68a;
+      background: var(--edu-green-light);
+      color: var(--edu-green);
+      border: 1px solid #a7f3d0;
       padding: 0.35rem 0.9rem;
       border-radius: 9999px;
       font-size: 0.8rem;
@@ -236,27 +244,48 @@
       border-top: 4px solid var(--edu-green);
     }
 
-    .card-icon {
-      width: 48px;
-      height: 48px;
-      background: var(--navy-blue-light);
-      color: var(--navy-blue);
+    .card-video-box {
+      width: 100%;
+      aspect-ratio: 16 / 9;
       border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      background: #0f172a;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+    .card-video-box iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .card-video-soon {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      border: 1.5px dashed #cbd5e1;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+      text-align: center;
+      padding: 0.75rem;
+      color: var(--text-muted);
     }
-
-    .card-parents .card-icon {
-      background: var(--gold-light);
-      color: var(--gold-accent);
+    .card-video-soon .soon-icon {
+      font-size: 2rem;
+      margin-bottom: 0.35rem;
     }
-
-    .card-green .card-icon {
-      background: var(--edu-green-light);
-      color: var(--edu-green);
+    .card-video-soon .soon-badge {
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: var(--navy-blue);
     }
 
     .card h3 {
@@ -297,7 +326,6 @@
       border-color: var(--navy-blue);
     }
 
-    /* Modal Styling */
     .modal {
       display: none;
       position: fixed;
@@ -348,6 +376,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 5;
     }
 
     .step-item {
@@ -387,6 +416,11 @@
       line-height: 1.4;
     }
 
+    @keyframes silkFloat {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(1deg); }
+    }
+
     footer {
       background: white;
       border-top: 1px solid var(--border);
@@ -399,23 +433,47 @@
 </head>
 <body>
 
+  <!-- شاشة الوشاح الحريري التفاعلية -->
+  <div id="silk-intro" onclick="dismissSilkIntro(event)" style="position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:99999; display:flex; flex-direction:column; align-items:center; justify-content:center; background:linear-gradient(135deg, #ffffff 0%, #ecfdf5 55%, #f8fafc 100%); cursor:pointer; overflow:hidden; transition: transform 1.1s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.9s ease;">
+    <canvas id="cloth-canvas" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;"></canvas>
+
+    <button onclick="dismissSilkIntro(event)" style="position:absolute; top:20px; left:20px; z-index:20; padding:7px 16px; border-radius:999px; background:rgba(15,43,72,0.08); border:1px solid rgba(15,43,72,0.18); color:#0f2b48; font-size:12px; font-weight:700; cursor:pointer;">
+      تخطي المقدمة ←
+    </button>
+
+    <div style="position:relative; z-index:10; display:flex; flex-direction:column; align-items:center; text-align:center; padding:24px;">
+      <div style="width:185px; height:185px; border-radius:28px; background:#ffffff; box-shadow:0 25px 50px -12px rgba(13,122,83,0.28); border:2px solid #a7f3d0; padding:12px; display:flex; align-items:center; justify-content:center; margin-bottom:20px; animation:silkFloat 3.5s ease-in-out infinite;">
+        <img src="https://lh3.googleusercontent.com/d/11BgMUuq5kBhfoZLkrSZWDQM4WPoMQ0_r" alt="EduBook Logistics Logo" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <h2 style="font-size:28px; font-weight:900; color:#0f2b48; margin:0 0 8px 0;">كتابي الذكي — <span style="color:#0d7a53;">EduBook Logistics</span></h2>
+      <p style="font-size:15px; color:#475569; font-weight:600; max-width:440px; margin:0 0 22px 0;">
+        المنظومة السحابية الذكية لإدارة سلاسل إمداد وتوزيع الكتاب المدرسي
+      </p>
+      <div style="display:inline-flex; align-items:center; gap:8px; padding:12px 28px; border-radius:999px; background:linear-gradient(90deg, #0d7a53, #0f2b48); color:#ffffff; font-size:14px; font-weight:800; box-shadow:0 12px 25px rgba(13,122,83,0.3);">
+        <span>✨ المس الوشاح أو انقر للدخول إلى المنصة</span>
+      </div>
+    </div>
+  </div>
+
   <header>
     <div class="nav-container">
       <a href="#" class="brand">
-        <div class="logo-container">E</div>
+        <div class="logo-container">
+          <img src="https://lh3.googleusercontent.com/d/11BgMUuq5kBhfoZLkrSZWDQM4WPoMQ0_r" alt="EduBook Logistics">
+        </div>
         <div>
           <span class="brand-title">EduBook Logistics</span>
           <span class="brand-sub">كتابي الذكي | المنظومة اللوجستية الوطنية</span>
         </div>
       </a>
-      <span class="badge-decree">🎓 القرار الوزاري 1275 | شهادة - مؤسسة ناشئة</span>
+      <span class="badge-decree">🚀 مسار علامة مشروع مبتكر | المرسوم التنفيذي 20-254</span>
     </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="hero-container">
-        <span class="hero-tag">حاضنة أعمال جامعة التكوين المتواصل - مركز عنابة</span>
+        <span class="hero-tag">حاضنة الأعمال — عنابة | مركز التوزيع (CRDDP)</span>
         <h1>الرقمنة الشاملة لسلاسل إمداد وتوزيع الكتاب المدرسي</h1>
         <p>
           نظام سحابي وتطبيق ميداني لتتبع الشحنات، أتمتة الجرد بالباركود، توفير خدمة الحجز والتوصيل للأولياء، والتنبؤ الدقيق بالاحتياجات لمنع التكديس والعجز السنوي.
@@ -441,8 +499,10 @@
         <!-- 1. التتبع -->
         <div class="card card-green">
           <div>
-            <div class="card-icon">🚚</div>
-            <h3>التتبع اللحظي للشحنات</h3>
+            <div class="card-video-box">
+              <iframe src="https://drive.google.com/file/d/1afCK-4_i8Yzq9SWtKMohf6m9tW_7PmFw/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+            <h3>🚚 التتبع اللحظي للشحنات</h3>
             <p>متابعة حركة طرود الكتب من مخازن المركز الولائي للتوزيع نحو المؤسسات التعليمية ببروتوكول رقمي يضمن وصول كامل الحصة المقررة دون ضياع.</p>
           </div>
           <button class="btn-detail" onclick="openDetailModal('مسار دورة الشحن والتوزيع', [
@@ -457,7 +517,10 @@
         <!-- 2. الجرد -->
         <div class="card">
           <div>
-            <div class="card-icon">🔍</div>
+            <div class="card-video-soon" style="background:linear-gradient(135deg, #f0f7ff 0%, #dbeafe 100%); border-color:#bfdbfe;">
+              <div class="soon-icon">🔍</div>
+              <span class="soon-badge">🎬 فيديو المحاكاة — قريباً</span>
+            </div>
             <h3>الجرد الميداني بالباركود</h3>
             <p>تطبيق هاتف لمسيري المصالح الاقتصادية والمخازن لمسح الكتب بالباركود وحساب الرصيد الفعلي تلقائياً مع كشف أي تباين في الحسابات.</p>
           </div>
@@ -473,7 +536,10 @@
         <!-- 3. الأولياء -->
         <div class="card card-parents">
           <div>
-            <div class="card-icon">👨‍👩‍👦</div>
+            <div class="card-video-soon" style="background:linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border-color:#fde68a;">
+              <div class="soon-icon">👨👩👦</div>
+              <span class="soon-badge" style="color:var(--gold-accent);">🎬 فيديو البوابة — قريباً</span>
+            </div>
             <h3>بوابة الأولياء والتوصيل</h3>
             <p>منصة تتيح للأولياء حجز الحزمة المدرسية كاملة، القضاء على الطوابير عبر خيار التوصيل للمنزل، وضمان وصول كتب المجانية لمستحقيها بكرامة.</p>
           </div>
@@ -489,7 +555,10 @@
         <!-- 4. التنبؤ والجداول -->
         <div class="card">
           <div>
-            <div class="card-icon">📊</div>
+            <div class="card-video-soon" style="background:linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border-color:#a7f3d0;">
+              <div class="soon-icon">📊</div>
+              <span class="soon-badge" style="color:var(--edu-green);">🎬 فيديو التنبؤ — قريباً</span>
+            </div>
             <h3>التنبؤ الذكي وأتمتة الجداول</h3>
             <p>خوارزمية لمعالجة مؤشرات الخريطة التربوية لحساب الحاجة الفعلية بدقة، مع توليد جداول المجانية الرسمية (15 و16) للمؤسسة جاهزة للاعتماد.</p>
           </div>
@@ -535,7 +604,7 @@
           <strong style="color: var(--edu-green);">مفعل ومختبر</strong>
         </div>
         <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem;">
-          <span>👨‍👩‍👦 بوابة حجز الأولياء والتوصيل</span>
+          <span>👨👩👦 بوابة حجز الأولياء والتوصيل</span>
           <strong style="color: var(--gold-accent);">جاهز للتجريب</strong>
         </div>
         <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; font-size: 0.9rem;">
@@ -544,17 +613,93 @@
         </div>
       </div>
 
-      <button class="btn btn-primary" style="width: 100%; justify-content: center;" onclick="alert('تم تسجيل طلبكم لمعاينة النموذج في جلسة التحكيم بالحاضنة!'); closeAppModal();">
+      <button class="btn btn-primary" style="width: 100%; justify-content: center;" onclick="alert('تم تسجيل طلبكم لمعاينة النموذج في جلسة التقييم بالحاضنة!'); closeAppModal();">
         طلب معاينة في جلسة العرض (Pitching)
       </button>
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2026 مشروع EduBook Logistics (كتابي الذكي) | مؤطر ضمن القرار الوزاري 1275 - حاضنة أعمال جامعة التكوين المتواصل</p>
+    <p>&copy; 2026 مشروع EduBook Logistics (كتابي الذكي) | مسار علامة مشروع مبتكر — المرسوم التنفيذي 20-254 (حاضنة الأعمال - عنابة)</p>
   </footer>
 
   <script>
+    // 1. فيزياء الوشاح الحريري والريح
+    (function() {
+      const intro = document.getElementById("silk-intro");
+      const canvas = document.getElementById("cloth-canvas");
+      if (!intro || !canvas) return;
+
+      const ctx = canvas.getContext("2d");
+      let w = canvas.width = window.innerWidth;
+      let h = canvas.height = window.innerHeight;
+      let windSpeed = 0;
+      let dismissed = false;
+      let t = 0;
+
+      window.addEventListener("resize", () => {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      });
+
+      function drawSilkCurtain() {
+        if (intro.style.display === "none") return;
+        ctx.clearRect(0, 0, w, h);
+        t += 0.035 + windSpeed * 0.12;
+
+        const ribbons = [
+          { fill: "rgba(13, 122, 83, 0.20)", y: h * 0.20, amp: 42, freq: 0.0045, spd: 1.0 },
+          { fill: "rgba(16, 185, 129, 0.15)", y: h * 0.42, amp: 52, freq: 0.0035, spd: 1.3 },
+          { fill: "rgba(255, 255, 255, 0.70)", y: h * 0.58, amp: 38, freq: 0.0050, spd: 0.9 },
+          { fill: "rgba(220, 38, 38, 0.09)", y: h * 0.74, amp: 32, freq: 0.0040, spd: 1.15 },
+          { fill: "rgba(13, 122, 83, 0.18)", y: h * 0.86, amp: 48, freq: 0.0030, spd: 1.4 }
+        ];
+
+        ribbons.forEach((rb, i) => {
+          ctx.beginPath();
+          ctx.moveTo(0, h);
+          const a = rb.amp + windSpeed * 120;
+          for (let x = 0; x <= w; x += 16) {
+            const y = rb.y
+              + Math.sin(x * rb.freq + t * rb.spd + i * 1.1) * a
+              + Math.cos(x * rb.freq * 0.5 - t * 0.8) * (a * 0.45)
+              - windSpeed * h * 0.55;
+            ctx.lineTo(x, y);
+          }
+          ctx.lineTo(w, h);
+          ctx.closePath();
+          ctx.fillStyle = rb.fill;
+          ctx.fill();
+        });
+
+        requestAnimationFrame(drawSilkCurtain);
+      }
+      drawSilkCurtain();
+
+      window.dismissSilkIntro = function(e) {
+        if (e) e.stopPropagation();
+        if (dismissed) return;
+        dismissed = true;
+
+        const start = performance.now();
+        function gust(now) {
+          const p = Math.min((now - start) / 800, 1);
+          windSpeed = p * 2.2;
+          if (p < 1) requestAnimationFrame(gust);
+        }
+        requestAnimationFrame(gust);
+
+        intro.style.transform = "translate3d(-115%, -30%, 0) rotate(-8deg) scale(1.08)";
+        intro.style.opacity = "0";
+        setTimeout(() => {
+          intro.style.display = "none";
+        }, 950);
+      };
+
+      intro.addEventListener("touchstart", (e) => window.dismissSilkIntro(e), { passive: true });
+    })();
+
+    // 2. نوافذ التفاصيل والمحاكاة
     function openDetailModal(title, steps) {
       document.getElementById('modalTitle').innerText = title;
       var container = document.getElementById('modalSteps');
